@@ -1,0 +1,90 @@
+@import "./variables";
+
+@mixin smMaxBreakPoint {
+  @media (max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin mdMaxBreakPoint {
+  @media (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin lgMaxBreakPoint {
+  @media (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin xlMaxBreakPoint {
+  @media (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin xxlMaxBreakPoint {
+  @media (max-width: #{$screen-xxl}) {
+    @content;
+  }
+}
+
+@mixin fullMaxBreakPoint {
+  @media (max-width: #{$screen-full}) {
+    @content;
+  }
+}
+
+
+@mixin textFragment {
+    font-size: 26px;
+    line-height: 30px;
+    font-family: 'Fragment Mono', monospace;
+
+    @include xlMaxBreakPoint {
+        font-size: 20px;
+        line-height: 22px;
+      }
+
+      @include smMaxBreakPoint {
+        font-size: 18px;
+        line-height: 20px;
+      }
+}
+
+@mixin textNunito {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgb(251, 253, 253);
+  letter-spacing: 0.2px;
+}
+
+@mixin titleMarhey {
+    text-align: center;
+    font-size: 52px;
+    letter-spacing: 4px;
+    font-family: 'Marhey', cursive;
+    text-shadow: 1px 9px 3px rgb(101 155 85 / 39%),
+     1px -1px 7px rgb(116 136 105 / 37%);
+    margin-bottom: 40px;
+
+    @include mdMaxBreakPoint {
+        font-size: 42px;
+       }
+       @include smMaxBreakPoint {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+}
+
+@mixin fl-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin fl-column{
+    display: flex;
+    flex-direction: column;
+}

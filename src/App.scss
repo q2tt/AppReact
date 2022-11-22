@@ -1,0 +1,13 @@
+
+@import './styles/variables.scss';
+
+#root{
+ // background-color: $main-black;
+ // padding-bottom: 100px;
+  background-image: url(../src/images/855933.webp);
+}
+.wrapper{
+width: 100%;
+height: 100%;
+  background-color: $main-black-opacity;
+}

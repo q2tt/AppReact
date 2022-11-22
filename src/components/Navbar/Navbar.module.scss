@@ -1,0 +1,37 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.navbar {
+  width: 100%;
+  background-color: rgb(7, 7, 7);
+  @include fl-row;
+  height: 80px;
+  box-shadow: rgb(76 175 80 / 54%) 0px 1px 1px,
+    rgb(255 248 248 / 22%) 0px 7px 12px;
+
+  @include lgMaxBreakPoint {
+    @include fl-column;
+    height: auto;
+    padding: 10px 0 30px 0;
+  }
+
+  &__link {
+    color: $white;
+    display: block;
+    margin-left: 120px;
+    height: 30px;
+    margin-top: 25px;
+    @include textFragment;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    @include lgMaxBreakPoint {
+      margin-top: 15px;
+      margin-left: 40px;
+    }
+  }
+  &__link:hover {
+    color: $main-green;
+  }
+}

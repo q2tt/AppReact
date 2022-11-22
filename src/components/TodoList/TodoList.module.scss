@@ -1,0 +1,74 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.wrapper{
+  min-height: 100vh;
+  background-color: $main-black-opacity;
+}
+.todo_container {
+  width: 100%;
+  height: 100%;
+  @include fl-row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 90px 100px;
+  box-sizing: border-box;
+
+  @include lgMaxBreakPoint {
+    padding: 40px 20px;
+  }
+}
+
+.task {
+  display: inline-block;
+  margin: 20px 30px;
+  height: 30px;
+  height: auto;
+  width: 500px;
+  line-height: 30px;
+  padding: 10px;
+  border: 1px solid rgb(231, 227, 227);
+  cursor: pointer;
+  background-color: $main-black-opacity;
+  @include textNunito;
+  box-sizing: border-box;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $main-green;
+  }
+
+  @include mdMaxBreakPoint {
+    width: 420px;
+    margin: 20px 0;
+  }
+
+  @include smMaxBreakPoint {
+    width: 280px;
+    margin: 14px 0;
+  }
+}
+.inp {
+  display: inline-block;
+  margin: 20px;
+  height: 30px;
+  height: auto;
+  width: 500px;
+  line-height: 30px;
+  padding: 10px;
+  border: 2px solid rgba(243, 236, 236, 0.603);
+  background-color: rgba(243, 236, 236, 0.486);
+  @include textNunito;
+  color: $main-black;
+  box-sizing: border-box;
+
+  @include mdMaxBreakPoint {
+    width: 420px;
+    margin: 20px 0;
+  }
+
+  @include smMaxBreakPoint {
+    width: 280px;
+    margin: 14px 0;
+  }
+}

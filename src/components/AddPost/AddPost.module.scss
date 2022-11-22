@@ -1,0 +1,83 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.form {
+  background-color: $main-black-opacity;
+  padding: 40px 0 0 100px;
+
+  @include lgMaxBreakPoint {
+    padding: 40px 0 0 60px;
+  }
+
+  @include smMaxBreakPoint {
+    padding: 20px 0 0 30px;
+  }
+
+  &__title {
+    width: 500px;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    box-shadow: rgb(13 173 15 / 49%) 5px 6px 12px -1px,
+      rgb(17 224 124 / 30%) 0px 6px 3px -1px;
+
+    @include mdMaxBreakPoint {
+      width: 80%;
+    }
+    @include smMaxBreakPoint {
+      height: 30px;
+      line-height: 20px;
+    }
+  }
+
+  &__error {
+    display: block;
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    width: 500px;
+    display: block;
+    height: 70px;
+    line-height: 30px;
+    font-size: 22px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    box-shadow: rgb(13 173 15 / 49%) 5px 6px 12px -1px,
+      rgb(17 224 124 / 30%) 0px 6px 3px -1px;
+
+    @include mdMaxBreakPoint {
+      width: 80%;
+    }
+    @include smMaxBreakPoint {
+      height: 50px;
+      line-height: 20px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 40px;
+    @include textFragment;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: #4374647a;
+    border: 1px solid white;
+    color: white;
+    font-size: 22px;
+    box-shadow: rgb(13 173 15 / 49%) 5px 6px 12px -1px,
+      rgb(17 224 124 / 30%) 0px 6px 3px -1px;
+
+    @include smMaxBreakPoint {
+      width: 170px;
+      height: 40px;
+      line-height: 30px;
+    }
+  }
+}
