@@ -7,7 +7,7 @@ import s from "./TodoList.module.scss";
 const TodoLisl = () => {
   const dispatch = useDispatch();
   const tasks = useSelector((state) => state.todoList.tasks);
-
+  
   useEffect(() => {
     dispatch(getTasks());
   }, []);

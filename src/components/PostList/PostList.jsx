@@ -17,13 +17,14 @@ const PostList = () => {
     }
   }, []);
 
-  return <div className={s.wrapper}> <div className={s.postsBox}>{ posts.map(function (post) {
-    return (
-      <div className={s.post}>
-        <h2 className={s.post__title}>{post.title}</h2>
-        <p className={s.post__txt}>{post.body}</p>
-      </div>
-    );
+  return <div className={s.wrapper}> <div className={s.postsBox}>
+    { posts.map(function (post) {
+      return (
+        <div className={s.post}>
+          <h2 className={s.post__title}>{post.title}</h2>
+          <p className={s.post__txt}>{post.body}</p>
+        </div>
+      );
   })}</div> </div>
 };
 

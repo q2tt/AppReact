@@ -27,6 +27,11 @@ export const usersAPI = {
       return response;
     });
   },
+  getUser(id) {
+    return instance.get(`users/${id}`).then((response) => {
+      return response;
+    });
+  },
   getUserAlbums(id) {
     return instance.get(`users/${id}/albums`).then((response) => {
       return response;
